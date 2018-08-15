@@ -1,9 +1,10 @@
 require 'sinatra'
 
 get '/' do
-  unless params[:nombre]
-    "Hola desconocido"
+  if params[:nombre]
+    @nombre = params[:nombre]
   else
-    "Hola #{params[:nombre]}"
+    @nombre = "Desconocido"
   end
+  erb :index
 end
