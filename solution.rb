@@ -4,7 +4,7 @@ get '/' do
   if params[:nombre]
     @nombre = params[:nombre]
   else
-    @nombre = "Desconocido"
+    @nombre = "desconocido"
   end
   erb :index
 end
